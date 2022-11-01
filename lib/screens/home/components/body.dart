@@ -72,7 +72,7 @@ class Body extends StatelessWidget {
             ),
             TextSpan(
               text:
-                  'Welcome to Lakehead University\nDSC Chapter! We are a community of students\nwho are passionate about learning and sharing\nknowledge about technology.\n\n',
+                  'Welcome to Lakehead University\nDSC Chapter! We are a community of\nstudents who are passionate about\nlearning and sharing knowledge\nabout technology.\n\n',
               style: Theme.of(context).textTheme.headline6,
             ),
             TextSpan(
@@ -81,7 +81,7 @@ class Body extends StatelessWidget {
             ),
             TextSpan(
               text:
-                  'We are a part of Google Developers\nStudent Club, a program for university students around the\nworld to learn about Google technologies\nand much more.',
+                  'We are a part of Google Developers\nStudent Club, a program for university\nstudents around the world to learn\nabout Google technologies\nand much more.',
               style: Theme.of(context).textTheme.headline6,
             ),
           ],
