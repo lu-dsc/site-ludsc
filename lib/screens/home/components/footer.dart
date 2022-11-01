@@ -77,7 +77,19 @@ class Footer extends StatelessWidget {
               ),
               const FaIcon(
                 FontAwesomeIcons.solidHeart,
-                color: Colors.red,
+                color: Color.fromARGB(255, 246, 39, 24),
+              ),
+              Text(
+                ' and ',
+                style: Theme.of(context).textTheme.bodyText1,
+              ),
+              const FaIcon(
+                FontAwesomeIcons.mugHot,
+                color: Color.fromARGB(255, 204, 204, 204),
+              ),
+              Text(
+                ' at Lakehead University',
+                style: Theme.of(context).textTheme.bodyText1,
               ),
             ],
           ),
