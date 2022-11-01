@@ -1,10 +1,18 @@
+// ignore: avoid_web_libraries_in_flutter
+import 'dart:html';
+
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 // Light/Primary Theme
 ThemeData lightThemeData(BuildContext context) {
   return ThemeData(
-    fontFamily: 'SanFranciscoText',
+    // https://github.com/flutter/flutter/issues/93140
+    fontFamily:
+        kIsWeb && (window.navigator.userAgent.contains('OS 15_') || window.navigator.userAgent.contains('OS 16_'))
+            ? '--apple-system'
+            : 'SanFranciscoText',
     appBarTheme: const AppBarTheme(
       color: Colors.transparent,
       elevation: 0,
@@ -29,7 +37,11 @@ ThemeData lightThemeData(BuildContext context) {
 // Dark Theme
 ThemeData darkThemeData(BuildContext context) {
   return ThemeData(
-    fontFamily: 'SanFranciscoText',
+    // https://github.com/flutter/flutter/issues/93140
+    fontFamily:
+        kIsWeb && (window.navigator.userAgent.contains('OS 15_') || window.navigator.userAgent.contains('OS 16_'))
+            ? '--apple-system'
+            : 'SanFranciscoText',
     appBarTheme: const AppBarTheme(
       color: Colors.transparent,
       elevation: 0,
