@@ -16,12 +16,18 @@ This is the website for the Lakehead University Developers Student Club. It is b
 3. Run `flutter pub get` to install dependencies
 4. Run `flutter run` to run the app
 
+### Execution
+
+1. Run `flutter run -d chrome --web-renderer canvaskit` to run the app in chrome
+2. Run `flutter build web --release --web-renderer canvaskit` to build the app for production
+
 ### Git Workflow
 
 1. Create a new branch for your feature/issue
 2. Commit your changes
-3. Push your changes to your branch
-4. Create a pull request for your branch
+3. Upgrade version number in `pubspec.yaml`
+4. Push your changes to your branch
+5. Create a pull request for your branch
 
 ## License
 
