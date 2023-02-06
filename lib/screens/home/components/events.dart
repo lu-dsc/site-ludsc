@@ -25,7 +25,23 @@ class Events extends StatelessWidget {
                 'https://gdsc.community.dev/events/details/developer-student-clubs-lakehead-university-presents-info-session-101/',
             eventTitle: 'Info Session 101',
             eventLocation: 'AT 1007 | ATAC Building',
-            eventTime: 'Thu 6 Oct 2022, 5:00 PM (EDT)',
+            eventTime: 'Thu, 6 Oct, 2022, 5:00 PM (EDT)',
+          ),
+          eventItem(
+            context,
+            url:
+                'https://gdsc.community.dev/events/details/developer-student-clubs-lakehead-university-presents-study-snack/',
+            eventTitle: 'Study & Snack',
+            eventLocation: 'RB 3024 | Ryan Building',
+            eventTime: 'Fri, Dec 16, 2022, 11:00 AM (EST)',
+          ),
+          eventItem(
+            context,
+            url:
+                'https://gdsc.community.dev/events/details/developer-student-clubs-lakehead-university-presents-introduction-to-git-github/',
+            eventTitle: 'Introduction to Git & GitHub',
+            eventLocation: 'AT 1010 | ATAC Building',
+            eventTime: 'Fri, Feb 10, 2023, 4:00 PM (EST)',
           ),
         ],
       ),
