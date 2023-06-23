@@ -12,6 +12,7 @@ class Events extends StatelessWidget {
     return Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
+        verticalDirection: VerticalDirection.up,
         children: [
           Text(
             'Join our events',
@@ -42,6 +43,14 @@ class Events extends StatelessWidget {
             eventTitle: 'Introduction to Git & GitHub',
             eventLocation: 'AT 1010 | ATAC Building',
             eventTime: 'Fri, Feb 10, 2023, 4:00 PM (EST)',
+          ),
+          eventItem(
+            context,
+            url:
+                'https://gdsc.community.dev/events/details/developer-student-clubs-lakehead-university-presents-mastering-leetcode-a-journey-to-coding-excellence-2023-06-24/',
+            eventTitle: 'Introduction to LeetCode',
+            eventLocation: 'Remote',
+            eventTime: 'Sat, Jun 24, 2023, 10:00 AM (EDT)',
           ),
         ],
       ),
