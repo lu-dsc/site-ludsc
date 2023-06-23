@@ -28,6 +28,7 @@ This is the website for the Lakehead University Developers Student Club. It is b
 3. Upgrade version number in `pubspec.yaml`
 4. Push your changes to your branch
 5. Create a pull request for your branch
+6. Release code with tag of the version number
 
 ## License
 
