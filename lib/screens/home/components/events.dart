@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:site_ludsc/components/simple_divider.dart';
 import 'package:site_ludsc/utils.dart';
@@ -51,6 +52,8 @@ class Events extends StatelessWidget {
             eventTitle: 'Introduction to LeetCode',
             eventLocation: 'Remote',
             eventTime: 'Sat, Jun 24, 2023, 10:00 AM (EDT)',
+            eventPlayback:
+                'https://lakeheadu.zoom.us/rec/share/Gzsffg5DHRX-VWyxHggl5EHTSEmG1FUnl0Fcb961UxX5JsXywYG4QhILXY_ZAkB6.CFscjDT-AW0USiEY',
           ),
         ],
       ),
@@ -63,6 +66,7 @@ class Events extends StatelessWidget {
     required String eventTitle,
     required String eventLocation,
     required String eventTime,
+    String? eventPlayback,
   }) {
     return InkWell(
       onTap: () => launchInBrowser(
@@ -77,9 +81,22 @@ class Events extends StatelessWidget {
           text: TextSpan(
             children: [
               TextSpan(
-                text: '$eventTitle\n',
+                text: '$eventTitle',
                 style: Theme.of(context).textTheme.headline5?.copyWith(fontWeight: FontWeight.bold),
               ),
+              if (eventPlayback != null)
+                TextSpan(
+                  text: ' · View',
+                  style: Theme.of(context).textTheme.headline6?.copyWith(
+                        color: Colors.blue,
+                      ),
+                  recognizer: TapGestureRecognizer()
+                    ..onTap = () => launchInBrowser(
+                          context,
+                          Uri.parse(eventPlayback),
+                        ),
+                ),
+              const TextSpan(text: '\n'),
               TextSpan(
                 text: '$eventLocation\n',
                 style: Theme.of(context).textTheme.headline6,
